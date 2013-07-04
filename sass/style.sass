@@ -1,0 +1,70 @@
+@import 'compass'
+@import url('http://fonts.googleapis.com/css?family=Open+Sans')
+
+$top-panel-bg-color: #b00
+
+body, p, table, tr, td, strong, h1, h2, h3, h4, h5, h6, blockquote, li
+  font-family: "Open Sans", sans-serif
+
+body
+  background-color: #222
+  color: #667
+
+a
+  +link-colors(#222, $top-panel-bg-color)
+// a:hover
+//   color: $top-panel-bg-color
+
+input[type="text"], input[type="password"], input[type="number"]
+  +border-radius
+  padding-top: 5px
+  padding-bottom: 5px
+  padding-left: 5px
+  border: 1px solid #ccc
+  outline-color: #ccc
+
+textarea
+  +border-radius
+  border: 1px solid #ccc
+
+.help-button
+  margin-left: 5px
+
+#top-panel
+  background-image: none
+  background: $top-panel-bg-color
+  padding-top: 30px
+  padding-bottom: 20px
+  border-bottom: 2px solid darken($top-panel-bg-color, 5)
+
+#top-panel img:first-child
+  display: none
+
+#search-box
+  +border-radius(45px)
+  outline: none
+  padding-top: 5px
+  padding-bottom: 6px
+  border: 2px solid darken($top-panel-bg-color, 10)
+
+#main-table, .bottom-sticker-inner
+  background-color: #eee
+
+.bottom-sticker-edge
+  background-image: none
+  background: transparent
+
+.section-header
+  font-size: 1.2em
+  font-weight: bold
+  border-bottom: 1px solid #ddd
+  margin-top: 2em
+
+#side-panel
+  background-color: darken(#eee, 2)
+
+#footer
+  border: none
+  border-top: 1px solid #000
+  a
+    +link-colors(#aaa, $top-panel-bg-color)
